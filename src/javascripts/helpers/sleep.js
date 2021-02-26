@@ -1,20 +1,24 @@
+import randomizer from './data/randomizer';
+
 let energy = 50;
 
 const nap = () => {
-  if (energy >= 50) {
+  const rand = randomizer();
+  if (energy >= 100 - rand) {
     energy = 100;
     return energy;
   }
-  energy += 50;
+  energy += rand;
   return energy;
 };
 
 const deepSlumber = () => {
-  if (energy >= 40) {
+  const rand = randomizer();
+  if (energy >= 100 - rand) {
     energy = 100;
     return energy;
   }
-  energy += 60;
+  energy += rand;
   return energy;
 };
 

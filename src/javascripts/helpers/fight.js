@@ -1,20 +1,24 @@
+import randomizer from './data/randomizer';
+
 let strength = 100;
 
 const runAway = () => {
-  if (strength >= 99) {
+  const rand = randomizer();
+  if (strength >= 100 - rand) {
     strength = 100;
     return strength;
   }
-  strength += 1;
+  strength += rand;
   return strength;
 };
 
 const attack = () => {
-  if (strength <= 10) {
+  const rand = randomizer();
+  if (strength <= rand) {
     strength = 0;
     return strength;
   }
-  strength -= 10;
+  strength -= rand;
   return strength;
 };
 

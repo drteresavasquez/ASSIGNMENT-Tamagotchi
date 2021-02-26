@@ -1,20 +1,24 @@
+import randomizer from './data/randomizer';
+
 let fun = 50;
 
 const superFun = () => {
-  if (fun >= 50) {
+  const rand = randomizer();
+  if (fun >= 100 - rand) {
     fun = 100;
     return fun;
   }
-  fun += 50;
+  fun += rand;
   return fun;
 };
 
 const littleFun = () => {
-  if (fun >= 98) {
+  const rand = randomizer();
+  if (fun >= 100 - rand) {
     fun = 100;
     return fun;
   }
-  fun += 2;
+  fun += rand;
   return fun;
 };
 

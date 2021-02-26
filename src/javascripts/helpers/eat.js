@@ -1,22 +1,26 @@
+import randomizer from './data/randomizer';
+
 let full = 100;
 
 const healthy = () => {
-  if (full >= 90) {
+  const rand = randomizer();
+  if (full >= (100 - rand)) {
     full = 100;
     return full;
   }
 
-  full += 10;
+  full += rand;
   return full;
 };
 
 const unhealthy = () => {
-  if (full <= 3) {
+  const rand = randomizer();
+  if (full <= rand) {
     full = 0;
     return full;
   }
 
-  full -= 3;
+  full -= rand;
   return full;
 };
 
