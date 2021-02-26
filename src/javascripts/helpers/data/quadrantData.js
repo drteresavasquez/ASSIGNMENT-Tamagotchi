@@ -1,38 +1,40 @@
-import { getPlayTotal, littleFun, superFun } from '../play';
-import { deepSlumber, getSleepTotal, nap } from '../sleep';
-import { getEatTotal, healthy, unhealthy } from '../eat';
-import { runAway, attack, getFightTotal } from '../fight';
+import { getPlayTotal, superFun } from '../play';
+import { deepSlumber, getSleepTotal } from '../sleep';
+import { getEatTotal } from '../eat';
+import { getFightTotal } from '../fight';
+import foodComa from '../combos/foodComa';
+import strengthUp from '../combos/strengthUp';
+import weakening from '../combos/weakness';
+import strengthDown from '../combos/strengthDown';
 
 const quadrantData = [
   {
     title: 'Play',
     btns: [
-      { type: 'increment-1', text: 'One', cb: superFun },
-      { type: 'increment-2', text: 'Two', cb: littleFun },
+      { type: 'increment', text: 'One', cb: superFun },
     ],
     getTotal: getPlayTotal
   },
   {
     title: 'Eat',
     btns: [
-      { type: 'increment', text: 'One', cb: healthy },
-      { type: 'decrement', text: 'Two', cb: unhealthy },
+      { type: 'increment', text: 'One', cb: foodComa },
+      { type: 'decrement', text: 'Two', cb: weakening },
     ],
     getTotal: getEatTotal
   },
   {
     title: 'Sleep',
     btns: [
-      { type: 'increment-1', text: 'One', cb: nap },
-      { type: 'increment-2', text: 'Two', cb: deepSlumber },
+      { type: 'increment', text: 'Two', cb: deepSlumber },
     ],
     getTotal: getSleepTotal
   },
   {
     title: 'Fight',
     btns: [
-      { type: 'increment', text: 'One', cb: runAway },
-      { type: 'decrement', text: 'Two', cb: attack },
+      { type: 'increment', text: 'One', cb: strengthUp },
+      { type: 'decrement', text: 'Two', cb: strengthDown },
     ],
     getTotal: getFightTotal
   },

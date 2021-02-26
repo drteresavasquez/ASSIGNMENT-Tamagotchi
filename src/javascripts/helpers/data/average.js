@@ -1,3 +1,4 @@
+import death from '../../components/death';
 import { getEatTotal } from '../eat';
 import { getFightTotal } from '../fight';
 import { getPlayTotal } from '../play';
@@ -22,6 +23,10 @@ const getAverage = () => {
   <div class="progress">
     <div class="progress-bar bg-${color()}" role="progressbar" style="width: ${progress}%" aria-valuenow="${progress}" aria-valuemin="0" aria-valuemax="100">${progress}%</div>
   </div>`;
+
+  if (progress <= 0) {
+    death();
+  }
 };
 
 export default getAverage;

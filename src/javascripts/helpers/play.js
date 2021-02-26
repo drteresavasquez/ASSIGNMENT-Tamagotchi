@@ -12,16 +12,18 @@ const superFun = () => {
   return fun;
 };
 
-const littleFun = () => {
+const funDown = () => {
   const rand = randomizer();
-  if (fun >= 100 - rand) {
-    fun = 100;
+  if (fun <= rand) {
+    fun = 0;
     return fun;
   }
-  fun += rand;
+  fun -= rand;
   return fun;
 };
 
 const getPlayTotal = () => fun;
 
-export { superFun, littleFun, getPlayTotal };
+export {
+  superFun, funDown, getPlayTotal
+};
