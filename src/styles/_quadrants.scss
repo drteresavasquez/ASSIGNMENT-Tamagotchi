@@ -1,0 +1,17 @@
+$quads: (
+  ('play', purple),
+  ('eat', red),
+  ('fight', blue),
+  ('sleep', green),
+);
+
+.quad {
+  width: 50%;
+  height: 50vh;
+
+  @each $quad-name, $color in $quads {
+    &.#{$quad-name} {
+      background-color: $color;
+    }
+  }
+}
