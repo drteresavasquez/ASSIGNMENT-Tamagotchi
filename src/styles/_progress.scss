@@ -1,5 +1,14 @@
 #progress {
   position: absolute;
   width: 100%;
-  background-color: orange;
+  height: 50px;
+
+  .progress {
+    height: 50px;
+
+    .progress-bar {
+      height: 50px;
+      font-size: 2em;
+    }
+  }
 }

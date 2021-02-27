@@ -1,31 +1,35 @@
 $quads: (
-  ('play', purple, flex-end, white),
-  ('eat', red, flex-start, white),
-  ('fight', blue, flex-start, white),
-  ('sleep', green, flex-end, white),
+  ('play', #43aa8b, flex-end, white),
+  ('eat', #b2b09b, flex-start, white),
+  ('fight', #171123, flex-start, white),
+  ('sleep', #db504a, flex-end, white)
 );
 
-.quad {
-  width: 50%;
-  height: 50vh;
+@each $quad-name, $bg-color, $align, $font-color in $quads {
+  .quad {
+    width: 50%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
 
-  @each $quad-name, $bg-color, $align, $font-color in $quads {
     &.#{$quad-name} {
       color: $font-color;
       padding: 20px;
+      justify-content: center;
+      text-align: center;
       background-color: $bg-color;
 
       ##{$quad-name}-container {
-        display: flex;
-        flex-direction: column;
-        align-items: $align;
-    
-        ##{$quad-name}-btn-container {
-          width: 25%;
+        // width: 50%;
+        align-items: center;
+        align-self: center;
 
-          > .btn {
-            align-items: $align;
-          }
+        ##{$quad-name}-score {
+          font-size: 2em;
+        }
+
+        ##{$quad-name}-btn-container {
+          align-self: center;
         }
       }
     }

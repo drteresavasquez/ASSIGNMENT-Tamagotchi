@@ -11,30 +11,30 @@ const quadrantData = [
   {
     title: 'Play',
     btns: [
-      { type: 'increment', text: 'One', cb: superFun },
+      { type: 'increment', text: 'Play Time!', cb: superFun },
     ],
     getTotal: getPlayTotal
   },
   {
     title: 'Eat',
     btns: [
-      { type: 'increment', text: 'One', cb: foodComa },
-      { type: 'decrement', text: 'Two', cb: weakening },
+      { type: 'increment', text: 'Healthy Meal', cb: foodComa },
+      { type: 'decrement', text: 'Treat', cb: weakening },
     ],
     getTotal: getEatTotal
   },
   {
     title: 'Sleep',
     btns: [
-      { type: 'increment', text: 'Two', cb: deepSlumber },
+      { type: 'increment', text: 'Take a Nap', cb: deepSlumber },
     ],
     getTotal: getSleepTotal
   },
   {
     title: 'Fight',
     btns: [
-      { type: 'increment', text: 'One', cb: strengthUp },
-      { type: 'decrement', text: 'Two', cb: strengthDown },
+      { type: 'increment', text: 'Run Away!', cb: strengthUp },
+      { type: 'decrement', text: 'Attack', cb: strengthDown },
     ],
     getTotal: getFightTotal
   },
