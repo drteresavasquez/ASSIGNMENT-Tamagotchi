@@ -1,11 +1,11 @@
 $quads: (
-  ('play', #43aa8b, flex-end, white),
-  ('eat', #b2b09b, flex-start, white),
-  ('fight', #171123, flex-start, white),
-  ('sleep', #db504a, flex-end, white)
+  ('play', #43aa8b, flex-end, white, 'top-right'),
+  ('eat', #b2b09b, flex-start, white, 'top-left'),
+  ('fight', #372248, flex-start, white, 'bottom-left'),
+  ('sleep', #db504a, flex-end, white, 'bottom-right')
 );
 
-@each $quad-name, $bg-color, $align, $font-color in $quads {
+@each $quad-name, $bg-color, $align, $font-color, $radius in $quads {
   .quad {
     width: 50%;
     height: 50vh;
@@ -18,9 +18,13 @@ $quads: (
       justify-content: center;
       text-align: center;
       background-color: $bg-color;
+      border-#{$radius}-radius: 150%;
+
+      @media screen and (max-width: 500px) {
+        border-#{$radius}-radius: 0%;
+      }
 
       ##{$quad-name}-container {
-        // width: 50%;
         align-items: center;
         align-self: center;
 

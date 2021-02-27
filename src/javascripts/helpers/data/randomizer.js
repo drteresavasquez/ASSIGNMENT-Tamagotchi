@@ -1,3 +1,3 @@
-const randomizer = () => Math.floor(Math.random() * 100) + 1;
+const randomizer = () => Math.floor(Math.random() * 50) + 1;
 
 export default randomizer;
