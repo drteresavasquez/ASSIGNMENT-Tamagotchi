@@ -20,21 +20,24 @@ $quads: (
       background-color: $bg-color;
       border-#{$radius}-radius: 150%;
 
-      @media screen and (max-width: 500px) {
-        border-#{$radius}-radius: 0%;
-      }
-
       ##{$quad-name}-container {
         align-items: center;
         align-self: center;
 
         ##{$quad-name}-score {
           font-size: 2em;
+          @media only screen and (max-width: 600px) {
+            font-size: 1.25em;
+          }
         }
 
         ##{$quad-name}-btn-container {
           align-self: center;
         }
+      }
+
+      @media only screen and (max-width: 600px) {
+        border-#{$radius}-radius: 0%;
       }
     }
   }

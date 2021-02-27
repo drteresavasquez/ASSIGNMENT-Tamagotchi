@@ -17,7 +17,7 @@ const modal = () => {
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button id="save-pet-image" type="button" class="btn btn-primary">Save changes</button>
+            <button id="save-pet-image" type="button" class="btn btn-success">Save Pet</button>
           </div>
         </div>
       </div>

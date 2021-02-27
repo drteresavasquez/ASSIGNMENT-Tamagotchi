@@ -18,7 +18,7 @@ const quadrantData = [
   {
     title: 'Eat',
     btns: [
-      { type: 'increment', text: 'Healthy Meal', cb: foodComa },
+      { type: 'increment', text: 'Healthy', cb: foodComa },
       { type: 'decrement', text: 'Treat', cb: weakening },
     ],
     getTotal: getEatTotal
@@ -33,7 +33,7 @@ const quadrantData = [
   {
     title: 'Fight',
     btns: [
-      { type: 'increment', text: 'Run Away!', cb: strengthUp },
+      { type: 'increment', text: 'Run', cb: strengthUp },
       { type: 'decrement', text: 'Attack', cb: strengthDown },
     ],
     getTotal: getFightTotal
